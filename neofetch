@@ -4750,7 +4750,8 @@ get_distro_ascii() {
     # $ascii_distro is the same as $distro.
     case "$(trim "$ascii_distro")" in
         "PhD_custom"*)
-            set_colors 125 29
+            # set_colors 125 29
+            set_colors 198 36
             read -rd '' ascii_data <<'EOF'
 
 ${c1}((((((((((((((((((                  
