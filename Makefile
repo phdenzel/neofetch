@@ -1,4 +1,4 @@
-PREFIX ?= /usr
+PREFIX ?= $(HOME)/local/neofetch
 MANDIR ?= $(PREFIX)/share/man
 
 all:
@@ -10,6 +10,7 @@ install:
 	@cp -p neofetch $(DESTDIR)$(PREFIX)/bin/neofetch
 	@cp -p neofetch.1 $(DESTDIR)$(MANDIR)/man1
 	@chmod 755 $(DESTDIR)$(PREFIX)/bin/neofetch
+	@ln -s $(DESTDIR)$(PREFIX)/bin/neofetch $(HOME)/local/bin/neofetch
 
 uninstall:
 	@rm -rf $(DESTDIR)$(PREFIX)/bin/neofetch
