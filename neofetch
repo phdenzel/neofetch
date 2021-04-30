@@ -4204,7 +4204,7 @@ get_window_size() {
             fi
         fi
     fi
-
+    
     term_width="${term_width:-0}"
 }
 
@@ -5427,11 +5427,10 @@ get_distro_ascii() {
     # This function gets the distro ascii art and colors.
     #
     # $ascii_distro is the same as $distro.
-    case "$(trim "$ascii_distro")" in
+    case $(trim "$ascii_distro") in
         "PhD_custom"*)
             set_colors 198 36
             read -rd '' ascii_data <<'EOF'
-
 ${c1}((((((((((((((((((                  
  ${c1}(((((((((((((((((((((((               
                    ${c1}(((((((             
@@ -5454,7 +5453,7 @@ ${c1}((((                         ${c2}//////
 ${c2}//////////////////////////////         
 EOF
             ;;
-    case $(trim "$ascii_distro") in
+
         "AIX"*)
             set_colors 2 7
             read -rd '' ascii_data <<'EOF'
